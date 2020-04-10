@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
     pizza.addCustomerSpecs(meats,veggies,size);
     pizza.getPrice();
-    $('#size').text(pizza.size);
+    $('#pizzaSize').text(pizza.size);
     $('#userToppings').text(pizza.meats.join(', ') + pizza.veggies.join(', '));
     $('#totalPrice').text(pizza.price);
     $('#outputDiv').show();
