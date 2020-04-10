@@ -14,12 +14,14 @@ $(document).ready(function(){
     $('input:checkbox[name=topping]:checked').each(function(){
       toppings.push($(this).val());
     })
-    $('#outputDiv').append(toppings);
-    $('#outputDiv').show();
-   
+    toppings.forEach(function(topping){
+     console.log(topping +', ');
+    });
     
-  
+    $('#outputDiv').show();
     var order = new Pizza()
-    console.log(toppings,size);
+    toppings.forEach(function(topping){
+     return topping;
+   });
   })
 });
