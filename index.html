@@ -13,8 +13,8 @@
       <div id='inputDiv'>
         <form id='theForm'class='form-group w-50'>
             <div class="jumbotron">
-              <p>Welcome to Duff's Pizza</p>
-              <p>tell us what you'd like below and we'll give you a price.</p>
+              <h1 class="display-4">Welcome to Duff's Pizza</h1>
+              <p class="lead">tell us what you'd like below and we'll give you a price.</p>
             </div>
             <div class="form-check row" id='toppingList'>
               <div class="col-xs-6">
@@ -66,12 +66,13 @@
             <div class="row">
               <button class="btn btn-danger" type='submit'>Calculate total:</button>
             </div>
-        </form>
-      </div>
+            <div class='panel panel-default' id='outputDiv'>
+              <p class='panel panel-heading'>Your Total:</p>
 
-      <div id='outputDiv'>
-        <p>you ordered a <span id='size'></span>inch with<span id='userToppings'></span></p>
-        <p>total price is: <span id='totalPrice'></span></p>
+              <p>You ordered a <span id='size'></span>inch with<span id='userToppings'></span></p>
+              <p>Your total price is: <span id='totalPrice'></span></p>
+            </div>
+        </form>
       </div>
     </div>
   </body>

@@ -3,14 +3,6 @@
   color: white;
 }
 
-select {
-  background-color: #d9534f;
-}
-
-input {
-  background-color: #d9534f;
-}
-
 .panel-heading {
   background-color: #d9534f;
   color: white;
@@ -18,9 +10,4 @@ input {
 
 #outputDiv{
   display: none;
-}
-
-.form-check-input {
-  margin-left: 10px;
-  padding-left: 10px;
 }
