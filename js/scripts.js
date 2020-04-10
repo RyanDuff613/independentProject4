@@ -10,6 +10,10 @@ Pizza.prototype.addCustomerSpecs = function(toppings, size){
   this.size = size;
 }
 
+Pizza.prototype.getPrice = function(){
+  
+}
+
 //User Logic --------------------------------------
 $(document).ready(function(){
   $('#theForm').submit(function(event){
