@@ -1,25 +1,32 @@
 // Business logic ---------------------------------
-function Pizza(toppings, size){
-  this.toppings = toppings,
+function Pizza(meats, veggies, size){
+  this.meats = meats,
+  this.veggies = veggies,
   this.size = size,
   this.price = 0
 }
 
-Pizza.prototype.addCustomerSpecs = function(toppings, size){
-  this.toppings = toppings;
+Pizza.prototype.addCustomerSpecs = function(meats,veggies, size){
+  this.meats = meats;
+  this.veggies = veggies;
   this.size = size;
 }
 
 Pizza.prototype.getPrice = function(){
   var total =0;
   if(this.size === "18in"){
-    this.price += 20;
+    this.price += 22;
+    this.price += 3 * this.meats.length;
+    this.price += 2 * this.veggies.length;
   }else if (this.size === '14in'){
     this.price += 16
+    this.price += 2 * this.meats.length;
+    this.price += 1 * this.veggies.length;
   }else{
     this.price +=10
+    this.price += 1 * this.meats.length;
+    this.price += 1 * this.veggies.length;
   }
-  this.price += 3 * this.toppings.length;
   console.log(this.price);
 }
 
@@ -29,13 +36,17 @@ $(document).ready(function(){
     event.preventDefault();
     var pizza = new Pizza;
     var size = $('#size').val();
-    var toppings = [];
-    $('input:checkbox[name=topping]:checked').each(function(){
-      toppings.push($(this).val());
-    })
-    pizza.addCustomerSpecs(toppings, size);
-    $('#outputDiv').show();
+    var meats = [];
+    var veggies = [];
+    $('input:checkbox[name=meats]:checked').each(function(){
+      meats.push($(this).val());
+    });
+    $('input:checkbox[name=veggies]:checked').each(function(){
+      veggies.push($(this).val());
+    });
+    pizza.addCustomerSpecs(meats,veggies,size);
     pizza.getPrice();
+    $('#outputDiv').show();
     //console.log(pizza, size, toppings);
   })
 });
