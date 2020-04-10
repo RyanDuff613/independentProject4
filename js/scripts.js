@@ -11,7 +11,16 @@ Pizza.prototype.addCustomerSpecs = function(toppings, size){
 }
 
 Pizza.prototype.getPrice = function(){
-  
+  var total =0;
+  if(this.size === "18in"){
+    total += 20;
+  }else if (this.size === '14in'){
+    total += 16
+  }else{
+    total +=10
+  }
+  total+=this.toppings.length;
+  console.log(total);
 }
 
 //User Logic --------------------------------------
@@ -26,7 +35,8 @@ $(document).ready(function(){
     })
     pizza.addCustomerSpecs(toppings, size);
     $('#outputDiv').show();
-    console.log(pizza, size, toppings);
+    pizza.getPrice();
+    //console.log(pizza, size, toppings);
   })
 });
 
