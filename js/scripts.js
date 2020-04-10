@@ -9,13 +9,17 @@ function Pizza(toppings, size){
 $(document).ready(function(){
   $('#theForm').submit(function(event){
     event.preventDefault();
+    var size = $('#size').val();
     var toppings = [];
     $('input:checkbox[name=topping]:checked').each(function(){
       toppings.push($(this).val());
-      $('#outputDiv').append(toppings);
-      console.log(toppings);
-      $('#outputDiv').show();
     })
+    $('#outputDiv').append(toppings);
+    $('#outputDiv').show();
+   
+    
+  
     var order = new Pizza()
+    console.log(toppings,size);
   })
 });
