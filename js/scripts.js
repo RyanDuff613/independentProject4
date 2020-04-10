@@ -13,14 +13,14 @@ Pizza.prototype.addCustomerSpecs = function(toppings, size){
 Pizza.prototype.getPrice = function(){
   var total =0;
   if(this.size === "18in"){
-    total += 20;
+    this.price += 20;
   }else if (this.size === '14in'){
-    total += 16
+    this.price += 16
   }else{
-    total +=10
+    this.price +=10
   }
-  total+=this.toppings.length;
-  console.log(total);
+  this.price += 3 * this.toppings.length;
+  console.log(this.price);
 }
 
 //User Logic --------------------------------------
