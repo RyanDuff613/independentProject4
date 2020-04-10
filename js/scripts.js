@@ -27,7 +27,6 @@ Pizza.prototype.getPrice = function(){
     this.price += 1 * this.meats.length;
     this.price += 1 * this.veggies.length;
   }
-  console.log(this.price);
 }
 
 //User Logic --------------------------------------
@@ -46,8 +45,11 @@ $(document).ready(function(){
     });
     pizza.addCustomerSpecs(meats,veggies,size);
     pizza.getPrice();
+    $('#size').text(pizza.size);
+    $('#userToppings').text(pizza.meats.toString(' ') + pizza.veggies.toString());
+    $('#totalPrice').text(pizza.price);
     $('#outputDiv').show();
-    //console.log(pizza, size, toppings);
+    console.log(pizza.meats.toString());
   })
 });
 
