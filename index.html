@@ -8,6 +8,35 @@
     <title>Independent Project 4: Pizza Order Form</title>
   </head>
   <body>
-    
+    <h1>Welcome to Ryan's Pizza</h1>
+    <h3>tell us what you'd like below and we'll give you a price.</h3>
+    <div id='inputDiv'>
+      <form id='theForm'>
+        <div id='toppingList'>
+          <label for=""></label>
+          <input type='checkbox' name="topping" value='cheese'>Mozarella<br>
+          <input type='checkbox' name="topping" value='pepperoni'>Pepperoni<br>
+          <input type='checkbox' name="topping" value='onion'>Onion<br>
+          <input type='checkbox' name="topping" value='mushroom'>Mushroom<br>
+          <input type='checkbox' name="topping" value='sausage'>Sausage<br>
+          <input type='checkbox' name="topping" value='green pepper'>Green Pepper<br>
+          <input type='checkbox' name="topping" value='pineapple'>Pineapple<br>
+        </div>
+        <div id="sizeList">
+          <select id='sizes'>
+            <option value='18in'>Large - 18inch - 3-5 adults</option>
+            <option value='14in'>Medium - 14inch - 2-3 adults</option>
+            <option value='10in'>Small - 10inch - 1 adult</option>
+          </select>
+        </div>
+        <button type='submit'>"Calculate total:</button>
+      </form>
+    </div>
+
+    <div id='outputDiv'>
+      <p>you ordered a <span id='size'></span>inch with<span id=userToppings></span></p>
+      <p>total price is: <span id='totalPrice'></span></p>
+    </div>
+
   </body>
   </html>
